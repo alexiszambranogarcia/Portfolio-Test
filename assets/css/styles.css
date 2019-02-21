@@ -10,8 +10,8 @@ html {
 /* ---- typography ---- */
 
 body {
-  color: #111;
-  font-family: Helvetica, Arial, sans-serif;
+  /* color: #111; */
+  font-family: 'PT Serif', serif;
   font-size: 16px;
   line-height: 147%;
 }
@@ -25,13 +25,52 @@ a:hover {
     color: violet;
 }
 
-h1 {}
+h1 {
+    font-size: 1em;
+}
 
-h2 {}
+h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 1em;
+    font-weight: 900;
+}
 
 h3 {}
 
+p{
+    padding: 2vh 2vh 2vh 0; 
+}
 /* ---- layout ---- */
+
+header { 
+    background: url(https://images.unsplash.com/photo-1533323919903-fd18bacc10b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.page-header{
+    padding: 100px;
+    /* background: black; */
+    color: white;
+    /* display: flex; */
+    /* justify-content: space-between;
+    align-items: center; */
+    /* padding: 30px 30px; */
+    /* position: fixed; */
+    /* top: o;
+    left: o;
+    width: 100%; */
+}
+.page-header{
+    /* background: black; */
+    color: white;
+    padding:calc(45vh - 1em)  0;
+    text-align:center;
+}
+
+
 
 body{
     background-color: lightblue;
@@ -50,7 +89,7 @@ body{
 .container {
   margin: 0 20px;
   max-width: 960px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .section {
@@ -58,29 +97,79 @@ body{
   padding-top: 20px;
 }
 
+/* Element Styles */
+
+
+img{
+    max-width: 100%;
+}
+
+
 /* ---- components ---- */
 
+.main-navigation{
+    color: white;
+    padding: 50px 100px;
+}
 
 .page-header a{
     color:white;
+    margin: 0px 40px;
 }
 
 .page-header a:hover{
-    color: grey;
+    color: black;
+    border-bottom: solid 4px black;
 }
+
 
 /* ---- header ----*/
 
 .page-header h1{
+    font-family: 'PT Serif', serif;
     font-size: 1em;
+    font-weight: 700;
 }
+
+.page-header h2{
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+    padding: 20px;
+}
+
+
+/* Banner */
+.banner{
+    height: 100vh;
+    background:grey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1{
+    font-family: 'PT Serif', serif;
+    font-weight: 900;
+    font-size: 3em;
+    line-height: 1.2em;
+}
+
+/* Portfolio section */
+
+.flex-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-list li{
+    flex-basis: 100%;
+}
+
 
 
 /* ---- section ---- */
 
-section#portfolio {
-
-}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -89,6 +178,10 @@ section#portfolio {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+    .flex-list li{
+        flex-basis: 50%;
+    }
 
 }
 
@@ -110,19 +203,6 @@ section#portfolio {
 
 
 
-
-
-
-
-.page-header{
-    background: black;
-    color: white;
-    padding:calc(50vh - 1em)  0;
-    text-align:center;
-}
-
-
-
 .inline-list li{
     display:inline-block;
 }
@@ -134,3 +214,12 @@ section#portfolio {
     width: 20%;
     text-align: left;
 }
+
+.image-size{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+
+<img style="-webkit-user-select: none;cursor: zoom-in;" src="https://images.unsplash.com/photo-1518021964703-4b2030f03085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2106&amp;q=80" width="962" height="639">
